@@ -8,17 +8,16 @@ import Skills from "./Components/Skills"
 import Contact from "./Components/Contact"
 import Footer from "./Components/Footer"
 function App() {
-
   return (
     <>
       <div>
-        <Navbar/>
-      <Home/>
-      <About/>
-      <Project/>
-      <Skills/>
-      <Contact/>
-      <Footer/>
+        <Navbar />
+        <Home />
+        <About />
+        <Project />
+        <Skills />
+        <Contact />
+        <Footer />
       </div>
       <Toaster />
     </>
