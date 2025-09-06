@@ -4,7 +4,7 @@ import pdf from "../assets/photo/Prince_Kumar_Resume.pdf";
 function About() {
     return (
         <>
-            <div name="About" className='max-w-screen-2xl container mx-auto px-4 md:px-15 my-5'>
+            <div name="About" className='max-w-screen-2xl container mx-auto px-4 md:px-15 my-5 dark:bg-gray-950 dark:text-white'>
                 <h1 className='md:text-3xl text-2xl font-bold mb-5 text-center'>About me</h1>
                 <div className='flex justify-center items-center mb-8'>
                     <div className='md:w-20 w-15 h-1 border-t-4 border-gray-600 rounded-full'></div>

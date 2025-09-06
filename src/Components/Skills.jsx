@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HTML from "../assets/skillsImg/html.png";
 import CSS from "../assets/skillsImg/css.jpg";
 import JavaScript from "../assets/skillsImg/javascript.png";
@@ -8,61 +8,80 @@ import Express from "../assets/skillsImg/express.png";
 import Node from "../assets/skillsImg/node.png";
 import Oracle from "../assets/skillsImg/oracle.png";
 
+import SkillsCard from './SkillsCard';
+
 function Skills() {
     let cardInfo = [
         {
             id: 1,
             logo: HTML,
-            name: "HTML"
+            name: "HTML",
+            level: 5
         },
         {
             id: 2,
             logo: CSS,
-            name: "CSS"
+            name: "CSS",
+            level: 4
         },
         {
             id: 3,
             logo: JavaScript,
-            name: "JavaScript"
+            name: "JavaScript",
+            level: 4
         },
         {
             id: 4,
             logo: ReactJS,
-            name: "ReactJS"
+            name: "ReactJS",
+            level: 5
         },
         {
             id: 5,
             logo: MongoDB,
-            name: "MongoDB"
+            name: "MongoDB",
+            level: 3
         },
         {
             id: 6,
             logo: Express,
-            name: "Express"
+            name: "Express",
+            level: 4
         },
         {
             id: 7,
             logo: Node,
-            name: "Node"
+            name: "NodeJS",
+            level: 3
         },
         {
             id: 8,
             logo: Oracle,
-            name: "Oracle"
+            name: "Oracle",
+            level: 2
         }
     ]
+    const [isHovered, setIsHovered] = useState(null);
     return (
         <>
-            <div name="Skills" className='max-w-screen-2xl container mx-auto px-4 md:px-15 my-10'>
+            <div name="Skills" className='max-w-screen-2xl container mx-auto px-4 md:px-15 my-10 dark:bg-gray-950 dark:text-white'>
                 <h1 className='font-bold text-3xl mb-5'>Skills</h1>
                 <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>
                     {
-                        cardInfo.map(({ id, logo, name }) => (
-                            <div key={id} className='flex flex-col justify-center bg-gray-50 items-center shadow-md rounded-full w-[150px] hover:scale-110 duration-300 cursor-pointer'>
-                                <img src={logo} className='md:w-[140px] w-[110px] rounded-full' alt="" />
+                        cardInfo.map(({ id, logo, name, level }) => (
+                            <div
+                                key={id}
+                                onMouseEnter={() => setIsHovered(id)}
+                                onMouseLeave={() => setIsHovered(null)}
+                                className='flex flex-col justify-center bg-gray-100 items-center shadow-md rounded-full h-[160px] w-[160px] hover:scale-110 duration-300 cursor-pointer'>
+                                <img src={logo} className='md:w-[100px] md:h-[100px] w-[100px] h-[100px] rounded-full' alt="" />
                                 <div>
-                                    <h1 className='md:font-bold'>{name}</h1>
+                                    <h1 className='md:font-bold dark:text-black'>{name}</h1>
                                 </div>
+                                <SkillsCard
+                                    level={level}
+                                    showStar={isHovered === id}
+                                />
                             </div>
                         ))
                     }

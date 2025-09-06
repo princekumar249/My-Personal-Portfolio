@@ -5,6 +5,8 @@ import { Link } from 'react-scroll';
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
 
+import DarkModeToggle from "./DarkModeToggle";
+
 function Navbar() {
   let [menu, setMenu] = useState(false);
 
@@ -33,7 +35,7 @@ function Navbar() {
 
   return (
     <>
-      <div className='max-w-screen-2xl container mx-auto px-2 md:px-15 shadow-md h-16 fixed left-0 right-0 top-0 z-50 bg-gray-100 sm:relative md:relative lg:fixed lg:top-0 lg:left-0 lg:w-full'>
+      <div className='max-w-screen-2xl container dark:bg-gray-500 dark:text-white mx-auto px-2 md:px-15 shadow-md h-16 fixed left-0 right-0 top-0 z-50 bg-gray-100 sm:relative md:relative lg:fixed lg:top-0 lg:left-0 lg:w-full'>
         <div className='flex justify-between items-center h-16'>
           <div className='flex space-x-2 items-center'>
             <img src={icon2} alt="" className='md:h-12 md:w-12 h-8 w-8 rounded-full' />
@@ -43,7 +45,7 @@ function Navbar() {
 
           {/* Desktop Navbar */}
           <div>
-            <ul className='hidden md:flex space-x-8'>
+            <ul className='hidden items-center md:flex space-x-8'>
               {
                 navTitle.map(({ id, title }) => (
                   <li
@@ -59,9 +61,13 @@ function Navbar() {
                   </li>
                 ))
               }
+              <DarkModeToggle />
             </ul>
-            <div onClick={() => setMenu(!menu)} className='md:hidden'>
-              {menu ? <IoClose size={24} /> : <AiOutlineMenu size={24} />}
+            <div className='md:hidden flex justify-center items-center gap-5'>
+              <DarkModeToggle />
+              <div onClick={() => setMenu(!menu)}>
+                {menu ? <IoClose size={24} /> : <AiOutlineMenu size={24} />}
+              </div>
             </div>
           </div>
         </div>
@@ -69,7 +75,7 @@ function Navbar() {
         {/* Mobile Navbar */}
         {
           menu && (
-            <div className='bg-white'>
+            <div className='bg-white dark:bg-gray-900 dark:text-white'>
               <ul className='md:hidden h-screen flex flex-col text-xl font-semibold space-y-2 items-center justify-center '>
                 {
                   navTitle.map(({ id, title }) => (
@@ -89,7 +95,7 @@ function Navbar() {
                 }
               </ul>
             </div>
-          )} 
+          )}
       </div>
     </>
   )

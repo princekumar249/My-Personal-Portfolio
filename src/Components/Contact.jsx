@@ -32,8 +32,8 @@ function Contact() {
     }
     return (
         <>
-            <div name="Contact" className='max-w-screen-2xl container mx-auto px-4 md:px-15 my-5'>
-                
+            <div name="Contact" className='max-w-screen-2xl container mx-auto px-4 md:px-15 my-5 dark:bg-gray-950 dark:text-white'>
+
                 <h1 className='font-bold text-3xl mb-2 text-center '>Contact me</h1>
                 <div className='flex items-center justify-center mb-4'>
                     <div className='w-20 h-1 border-t-3 border-gray-600 rounded-full'></div>
@@ -43,7 +43,7 @@ function Contact() {
                 <div className='flex flex-col md:flex-row justify-center items-center'>
                     <div className='md:w-1/2'>
                         <p className='md:mx-37 mx-8'>Please fill out the form to contact me</p>
-                        <div className='flex flex-col justify-center items-center mt-5'>
+                        <div className='flex flex-col justify-center items-center mt-5 dark:text-black'>
                             <form
                                 onSubmit={handleSubmit(onSubmit)}
                                 // action="https://getform.io/f/broggjqa"
@@ -93,11 +93,11 @@ function Contact() {
                     </div>
                     <div className='md:w-1/2'>
                         <ul className='flex md:space-x-8 md:mx-30 space-x-4 mt-6'>
-                            <a href="https://www.linkedin.com/in/prince-kumar-p2005" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-blue-500'><li><FaLinkedin size={40}/></li></a>
-                            <a href="https://github.com/princekumar249" target='_blank' className='hover:scale-110 duration-200 cursor-pointer'><li><FaGithub size={40}/></li></a>
-                            <a href="https://wa.me/918439017572" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-green-500'><li><FaSquareWhatsapp size={40}/></li></a>
-                            <a href="mailto: princekumar746586@gmail.com" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-red-600'><li><IoMdMail size={40}/></li></a>
-                            <a href="tel:918439017572" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-emerald-400'><li><MdAddIcCall size={40}/></li></a>
+                            <a href="https://www.linkedin.com/in/prince-kumar-p2005" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-blue-500'><li><FaLinkedin size={40} /></li></a>
+                            <a href="https://github.com/princekumar249" target='_blank' className='hover:scale-110 duration-200 cursor-pointer'><li><FaGithub size={40} /></li></a>
+                            <a href="https://wa.me/918439017572" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-green-500'><li><FaSquareWhatsapp size={40} /></li></a>
+                            <a href="mailto: princekumar746586@gmail.com" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-red-600'><li><IoMdMail size={40} /></li></a>
+                            <a href="tel:918439017572" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-emerald-400'><li><MdAddIcCall size={40} /></li></a>
                         </ul>
                     </div>
                 </div>

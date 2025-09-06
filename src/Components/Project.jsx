@@ -69,23 +69,23 @@ function Project() {
 
     return (
         <>
-            <div name="Projects" className='max-w-screen-2xl container mx-auto px-4 md:px-15 my-5 md:my-10'>
+            <div name="Projects" className='max-w-screen-2xl container mx-auto px-4 md:px-15 my-5 md:my-10 dark:bg-gray-950 dark:text-white'>
                 <div>
                     <h1 className='text-3xl font-bold mb-5'>My Projects </h1>
                     <div className='grid grid-cols-1 md:grid-cols-4 gap-4 my-4'>
                         {
                             cardLogo.map(({ id, logo, name, info, link, code }) => (
-                                <div className='md:w-[100%] md:h-[100%] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-105 duration-300 ' key={id}>
+                                <div className='md:w-[100%] md:h-[100%] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-105 duration-300 bg-gray-100 dark:bg-white' key={id}>
                                     <img src={logo} className="md:w-[120px] md:h-[120px] w-[80px] h-[80px] mb-1" alt="" />
                                     <div>
-                                        <div className='font-bold text-xl px-2'>{name}</div>
-                                        <p className='px-2 text-gray-700 text-justify md:text-sm'>{info}</p>
+                                        <div className='font-bold text-xl px-2 dark:text-black'>{name}</div>
+                                        <p className='px-2 mt-1 text-gray-700 text-justify md:text-sm'>{info}</p>
                                     </div>
                                     <div className='px-2 py-4 space-x-4'>
                                         <button
                                             onClick={() => window.open(link, "_blank")}
                                             className='inline-block bg-sky-500 text-white hover:bg-white hover:text-sky-600 hover:scale-105 duration-200 border-2 border-transparent hover:border-sky-700 font-bold rounded-md md:px-3 md:py-2 px-2 py-1 cursor-pointer'>
-                                        Website link</button>
+                                            Website link</button>
                                         <button
                                             onClick={() => window.open(code, "_blank")}
                                             className='inline-block bg-red-600 text-white hover:bg-white hover:text-red-600 hover:scale-105 duration-200 border-2 border-transparent hover:border-red-700 font-bold rounded-md md:px-3 md:py-2 px-2 py-1 cursor-pointer'>
