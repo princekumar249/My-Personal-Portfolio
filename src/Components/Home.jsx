@@ -57,7 +57,7 @@ function Home() {
                         </div>
                     </div>
                     <div className='md:w-1/2 md:mt-4 md:ml-48 order-1 md:order-2'>
-                        <img src={homePic} className='rounded-4xl md:mx-20 mx-8 w-[300px] h-[340px] md:h-[26rem] md:w-[22rem] hover:scale-110 duration-200' alt="" />
+                        <img src={homePic} className='rounded-4xl md:mx-20 mx-6 w-[280px] h-[320px] md:h-[26rem] md:w-[22rem] hover:scale-110 duration-200' alt="" />
                     </div>
                 </div>
             </div>

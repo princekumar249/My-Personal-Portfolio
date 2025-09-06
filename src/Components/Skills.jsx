@@ -58,8 +58,8 @@ function Skills() {
                 <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>
                     {
                         cardInfo.map(({ id, logo, name }) => (
-                            <div key={id} className='flex flex-col justify-center bg-gray-50 items-center shadow-md rounded-full w-[180px] hover:scale-110 duration-300 cursor-pointer'>
-                                <img src={logo} className='md:w-[140px] w-[140px] rounded-full' alt="" />
+                            <div key={id} className='flex flex-col justify-center bg-gray-50 items-center shadow-md rounded-full w-[150px] hover:scale-110 duration-300 cursor-pointer'>
+                                <img src={logo} className='md:w-[140px] w-[110px] rounded-full' alt="" />
                                 <div>
                                     <h1 className='md:font-bold'>{name}</h1>
                                 </div>
