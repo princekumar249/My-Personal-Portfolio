@@ -11,6 +11,11 @@ import Calculator from '../assets/projectImg/calculator.png';
 import Spotify from '../assets/projectImg/spotify.png';
 import Netflix from '../assets/projectImg/netflix.png';
 
+import Cal from '../assets/vedio/CalculatorVedio.mp4';
+import connectGameV from '../assets/vedio/connectGameVedio.mp4';
+import netflixVedio from '../assets/vedio/netflixVedio.mp4';
+import toDoListVedio from '../assets/vedio/toDoListVedio.mp4';
+
 function Project() {
     function SampleNextArrow(props) {
         const { className, style, onClick } = props;
@@ -67,8 +72,7 @@ function Project() {
             logo: Weather,
             name: "Weather Forecast App",
             info: "A responsive weather app built with React that shows real-time temperature, humidity, and wind data using the OpenWeatherMap API.",
-            link: "https://princekumar249.github.io/Weather-Forecast-App/",
-            code: "https://github.com/princekumar249/Weather-Forecast-App.git"
+            link: "https://current-weather123.netlify.app/",
         },
         {
             id: 2,
@@ -76,15 +80,14 @@ function Project() {
             name: "Simon Game",
             info: "A classic Simon Game built using HTML, CSS, and JavaScript that tests memory by repeating increasingly complex color sequences.",
             link: "https://princekumar249.github.io/Simon-Game/",
-            code: "https://github.com/princekumar249/Simon-Game.git"
         },
         {
             id: 3,
             logo: ConnectGame,
             name: "Connect-4-Game",
             info: "A two-player Connect four game built with HTML, CSS, and JavaScript. where both player drop colored discs to connect four.",
-            link: "https://princekumar249.github.io/connect-4-game/",
-            code: "https://github.com/princekumar249/connect-4-game.git"
+            link: "https://connect-color-game.netlify.app/",
+            vedio: connectGameV
         },
         {
             id: 4,
@@ -92,7 +95,7 @@ function Project() {
             name: "To-Do-List",
             info: "A simple and user-friendly To-Do List app using HTML, CSS, and JavaScript that lets users add, edit, delete, and manage daily tasks easily.",
             link: "https://princekumar249.github.io/To-Do-List/",
-            code: "https://github.com/princekumar249/To-Do-List.git"
+            vedio: toDoListVedio
         },
         {
             id: 5,
@@ -100,7 +103,7 @@ function Project() {
             name: "Calculator",
             info: "A basic calculator built with HTML, CSS, and JavaScript that performs addition, subtraction, multiplication, and division operations easily.",
             link: "https://princekumar249.github.io/Calculator/",
-            code: "https://github.com/princekumar249/Calculator.git"
+            vedio: Cal
         },
         {
             id: 6,
@@ -108,7 +111,6 @@ function Project() {
             name: "Spotify Clone",
             info: "A Spotify clone built using HTML and CSS that replicates the layout and design and user interface of the popular music streaming app.",
             link: "https://princekumar249.github.io/Spotify_Clone/",
-            code: "https://github.com/princekumar249/Spotify_Clone.git"
         },
         {
             id: 7,
@@ -116,7 +118,7 @@ function Project() {
             name: "Netflix Clone",
             info: "A Netflix clone built using HTML and CSS that recreates the homepage layout, design, and visual style of the popular streaming platform’s website.",
             link: "https://github.com/princekumar249/Netflix-Clone.git",
-            code: "https://github.com/princekumar249/Netflix-Clone.git"
+            vedio: netflixVedio
         }
     ];
 
@@ -128,7 +130,7 @@ function Project() {
                     <div className='w-full md:w-3/4 m-auto'>
                         <Slider {...settings}>
                             {
-                                cardLogo.map(({ id, logo, name, info, link, code }) => (
+                                cardLogo.map(({ id, logo, name, info, link, vedio }) => (
                                     <div
                                         key={id}
                                         className='rounded-lg shadow-lg p-3 cursor-pointer hover:scale-105 duration-300 bg-gray-100 dark:bg-white mx-2'
@@ -141,16 +143,16 @@ function Project() {
                                         <div className='px-2 py-3 space-x-2 flex flex-wrap'>
                                             <button
                                                 onClick={() => window.open(link, "_blank")}
-                                                className='bg-sky-500 text-white hover:bg-white hover:text-sky-600 hover:scale-105 duration-200 border-2 border-transparent hover:border-sky-700 font-semibold rounded-md px-3 py-1'
+                                                className='bg-sky-500 text-white hover:bg-white hover:text-sky-600 hover:scale-105 cursor-pointer duration-200 border-2 border-transparent hover:border-sky-700 font-semibold rounded-md px-3 py-1'
                                             >
                                                 Website
                                             </button>
-                                            {/* <button
-                                                onClick={() => window.open(code, "_blank")}
-                                                className='bg-red-600 text-white hover:bg-white hover:text-red-600 hover:scale-105 duration-200 border-2 border-transparent hover:border-red-700 font-semibold rounded-md px-3 py-1'
+                                            <button
+                                                onClick={() => window.open(vedio, "_blank")}
+                                                className='bg-red-600 text-white hover:bg-white hover:text-red-600 hover:scale-105 cursor-pointer duration-200 border-2 border-transparent hover:border-red-700 font-semibold rounded-md px-3 py-1'
                                             >
-                                                Source Code
-                                            </button> */}
+                                                Demo Vedio
+                                            </button>
                                         </div>
                                     </div>
                                 ))
