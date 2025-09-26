@@ -145,12 +145,12 @@ function Project() {
                                             >
                                                 Website
                                             </button>
-                                            <button
+                                            {/* <button
                                                 onClick={() => window.open(code, "_blank")}
                                                 className='bg-red-600 text-white hover:bg-white hover:text-red-600 hover:scale-105 duration-200 border-2 border-transparent hover:border-red-700 font-semibold rounded-md px-3 py-1'
                                             >
                                                 Source Code
-                                            </button>
+                                            </button> */}
                                         </div>
                                     </div>
                                 ))
