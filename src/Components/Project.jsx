@@ -1,4 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import Weather from '../assets/projectImg/Weather.png';
 import SimonGame from '../assets/projectImg/simonGame.png';
 import ConnectGame from '../assets/projectImg/connectGame.png';
@@ -8,7 +12,56 @@ import Spotify from '../assets/projectImg/spotify.png';
 import Netflix from '../assets/projectImg/netflix.png';
 
 function Project() {
-    let cardLogo = [
+    function SampleNextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{ ...style, display: "block", background: "black", borderRadius: "50%" }}
+                onClick={onClick}
+            />
+        );
+    }
+
+    function SamplePrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{ ...style, display: "block", background: "black", borderRadius: "50%" }}
+                onClick={onClick}
+            />
+        );
+    }
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 400,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    };
+
+    const cardLogo = [
         {
             id: 1,
             logo: Weather,
@@ -65,42 +118,50 @@ function Project() {
             link: "https://github.com/princekumar249/Netflix-Clone.git",
             code: "https://github.com/princekumar249/Netflix-Clone.git"
         }
-    ]
+    ];
 
     return (
         <>
-            <div name="Projects" className='max-w-screen-2xl container mx-auto px-4 md:px-15 my-5 md:my-10 dark:bg-gray-950 dark:text-white'>
+            <div name="Projects" className='max-w-screen-2xl container mx-auto px-4 md:px-10 my-5 md:my-10 dark:bg-gray-950 dark:text-white'>
                 <div>
-                    <h1 className='text-3xl font-bold mb-5'>My Projects </h1>
-                    <div className='grid grid-cols-1 md:grid-cols-4 gap-4 my-4'>
-                        {
-                            cardLogo.map(({ id, logo, name, info, link, code }) => (
-                                <div className='md:w-[100%] md:h-[100%] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-105 duration-300 bg-gray-100 dark:bg-white' key={id}>
-                                    <img src={logo} className="md:w-[120px] md:h-[120px] w-[80px] h-[80px] mb-1" alt="" />
-                                    <div>
-                                        <div className='font-bold text-xl px-2 dark:text-black'>{name}</div>
-                                        <p className='px-2 mt-1 text-gray-700 text-justify md:text-sm'>{info}</p>
+                    <h1 className='text-3xl font-bold mb-5'>My Projects</h1>
+                    <div className='w-full md:w-3/4 m-auto'>
+                        <Slider {...settings}>
+                            {
+                                cardLogo.map(({ id, logo, name, info, link, code }) => (
+                                    <div
+                                        key={id}
+                                        className='rounded-lg shadow-lg p-3 cursor-pointer hover:scale-105 duration-300 bg-gray-100 dark:bg-white mx-2'
+                                    >
+                                        <img src={logo} className="w-full h-40 object-contain mb-3" alt={name} />
+                                        <div>
+                                            <h2 className='font-bold text-lg md:text-xl dark:text-black px-2'>{name}</h2>
+                                            <p className='px-2 mt-2 text-gray-700 text-sm text-justify'>{info}</p>
+                                        </div>
+                                        <div className='px-2 py-3 space-x-2 flex flex-wrap'>
+                                            <button
+                                                onClick={() => window.open(link, "_blank")}
+                                                className='bg-sky-500 text-white hover:bg-white hover:text-sky-600 hover:scale-105 duration-200 border-2 border-transparent hover:border-sky-700 font-semibold rounded-md px-3 py-1'
+                                            >
+                                                Website
+                                            </button>
+                                            <button
+                                                onClick={() => window.open(code, "_blank")}
+                                                className='bg-red-600 text-white hover:bg-white hover:text-red-600 hover:scale-105 duration-200 border-2 border-transparent hover:border-red-700 font-semibold rounded-md px-3 py-1'
+                                            >
+                                                Source Code
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div className='px-2 py-4 space-x-4'>
-                                        <button
-                                            onClick={() => window.open(link, "_blank")}
-                                            className='inline-block bg-sky-500 text-white hover:bg-white hover:text-sky-600 hover:scale-105 duration-200 border-2 border-transparent hover:border-sky-700 font-bold rounded-md md:px-3 md:py-2 px-2 py-1 cursor-pointer'>
-                                            Website link</button>
-                                        <button
-                                            onClick={() => window.open(code, "_blank")}
-                                            className='inline-block bg-red-600 text-white hover:bg-white hover:text-red-600 hover:scale-105 duration-200 border-2 border-transparent hover:border-red-700 font-bold rounded-md md:px-3 md:py-2 px-2 py-1 cursor-pointer'>
-                                            Source code
-                                        </button>
-                                    </div>
-                                </div>
-                            ))
-                        }
+                                ))
+                            }
+                        </Slider>
                     </div>
                 </div>
             </div>
-            <hr className='opacity-5 ' />
+            <hr className='opacity-5 mt-8' />
         </>
-    )
+    );
 }
 
-export default Project
+export default Project;

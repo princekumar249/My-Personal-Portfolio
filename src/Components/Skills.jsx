@@ -8,7 +8,7 @@ import Express from "../assets/skillsImg/express.png";
 import Node from "../assets/skillsImg/node.png";
 import Oracle from "../assets/skillsImg/oracle.png";
 
-import SkillsCard from './SkillsCard';
+import SkillRating from './SkillRating';
 
 function Skills() {
     let cardInfo = [
@@ -34,13 +34,13 @@ function Skills() {
             id: 4,
             logo: ReactJS,
             name: "ReactJS",
-            level: 5
+            level: 4
         },
         {
             id: 5,
             logo: MongoDB,
             name: "MongoDB",
-            level: 3
+            level: 4
         },
         {
             id: 6,
@@ -52,13 +52,13 @@ function Skills() {
             id: 7,
             logo: Node,
             name: "NodeJS",
-            level: 3
+            level: 4
         },
         {
             id: 8,
             logo: Oracle,
             name: "Oracle",
-            level: 2
+            level: 4
         }
     ]
     const [isHovered, setIsHovered] = useState(null);
@@ -78,7 +78,7 @@ function Skills() {
                                 <div>
                                     <h1 className='md:font-bold dark:text-black'>{name}</h1>
                                 </div>
-                                <SkillsCard
+                                <SkillRating
                                     level={level}
                                     showStar={isHovered === id}
                                 />

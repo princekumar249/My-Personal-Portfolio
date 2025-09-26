@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SkillsCard = ({ level, showStar }) => {
+const SkillRating = ({ level, showStar }) => {
     const totalStars = 5;
 
     return (
@@ -20,4 +20,4 @@ const SkillsCard = ({ level, showStar }) => {
     );
 };
 
-export default SkillsCard;
+export default SkillRating;
