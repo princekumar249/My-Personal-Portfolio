@@ -57,7 +57,7 @@ function Home() {
                         </div>
                     </div>
                     <div className='md:w-1/2 md:mt-10 mt-8 md:ml-48 order-1 md:order-2'>
-                        <img src={homePic} className='rounded-tl-full rounded-tr-full rounded-bl-4xl rounded-br-4xl object-cover md:mx-20 mx-6 w-[280px] h-[320px] md:h-[24rem] md:w-[20rem]' alt="" />
+                        <img src={homePic} className='rounded-tl-full rounded-tr-full border-2 border-red-300 rounded-bl-4xl rounded-br-4xl object-cover md:mx-20 mx-6 w-[280px] h-[320px] md:h-[24rem] md:w-[20rem]' alt="" />
                     </div>
                 </div>
             </div>

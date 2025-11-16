@@ -13,7 +13,7 @@ function About() {
                 </div>
                 <div className='flex flex-col md:flex-row'>
                     <div className='md:w-1/2'>
-                        <img src={icon2} className='md:h-80 md:w-80 rounded-4xl md:ml-17' alt="" />
+                        <img src={icon2} className='md:h-80 md:w-80 rounded-4xl border-2 border-red-500 md:ml-17' alt="" />
                     </div>
                     <div className='md:w-1/2 mt-5 md:mt-10'>
                         <p className='mb-8 text-justify'>Hi, I'm <strong>Prince Kumar</strong>, a passionate Full Stack Developer specializing in <strong>MERN Stack</strong> with a solid foundation in both <strong>Frontend</strong> & <strong>Backend development</strong>, as well as <strong>Database management</strong>.  I'm currently pursuing a B. TECH in Information Technology, actively engaging in projects that enhance my coding skills. I'm eager to learn and contribute to dynamic teams while growing as a software engineering.</p>

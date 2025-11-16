@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// Images
 import Weather from '../assets/projectImg/Weather.png';
 import SimonGame from '../assets/projectImg/simonGame.png';
 import ConnectGame from '../assets/projectImg/connectGame.png';
@@ -11,68 +12,68 @@ import Calculator from '../assets/projectImg/calculator.png';
 import Spotify from '../assets/projectImg/spotify.png';
 import Netflix from '../assets/projectImg/netflix.png';
 
+// Videos
 import Cal from '../assets/vedio/CalculatorVedio.mp4';
 import connectGameV from '../assets/vedio/connectGameVedio.mp4';
 import netflixVedio from '../assets/vedio/netflixVedio.mp4';
 import toDoListVedio from '../assets/vedio/toDoListVedio.mp4';
 
 function Project() {
-    function SampleNextArrow(props) {
-        const { className, style, onClick } = props;
+
+    // Desktop Slider Arrows
+    function NextArrow(props) {
+        const { onClick } = props;
         return (
             <div
-                className={className}
-                style={{ ...style, display: "block", background: "black", borderRadius: "50%" }}
                 onClick={onClick}
-            />
+                className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 bg-black text-white w-8 h-8 flex items-center justify-center rounded-full cursor-pointer z-10"
+            >
+                ❯
+            </div>
         );
     }
 
-    function SamplePrevArrow(props) {
-        const { className, style, onClick } = props;
+    function PrevArrow(props) {
+        const { onClick } = props;
         return (
             <div
-                className={className}
-                style={{ ...style, display: "block", background: "black", borderRadius: "50%" }}
                 onClick={onClick}
-            />
+                className="absolute left-[-20px] top-1/2 transform -translate-y-1/2 bg-black text-white w-8 h-8 flex items-center justify-center rounded-full cursor-pointer z-10"
+            >
+                ❮
+            </div>
         );
     }
 
     const settings = {
         dots: true,
         infinite: true,
-        speed: 400,
         slidesToShow: 3,
         slidesToScroll: 1,
+        speed: 400,
         arrows: true,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
+                settings: { slidesToShow: 2 }
             },
             {
                 breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
+                settings: { slidesToShow: 1 }
             }
         ]
     };
 
-    const cardLogo = [
+    const cardData = [
         {
             id: 1,
             logo: Weather,
             name: "Weather Forecast App",
-            info: "A responsive weather app built with React that shows real-time temperature, humidity, and wind data using the OpenWeatherMap API.",
+            info: "A responsive weather app built with React that shows real-time temperature, humidity, and wind data using the Open WeatherMap API.",
             link: "https://current-weather123.netlify.app/",
+            vedio: connectGameV
         },
         {
             id: 2,
@@ -80,6 +81,7 @@ function Project() {
             name: "Simon Game",
             info: "A classic Simon Game built using HTML, CSS, and JavaScript that tests memory by repeating increasingly complex color sequences.",
             link: "https://princekumar249.github.io/Simon-Game/",
+            vedio: connectGameV
         },
         {
             id: 3,
@@ -111,6 +113,7 @@ function Project() {
             name: "Spotify Clone",
             info: "A Spotify clone built using HTML and CSS that replicates the layout and design and user interface of the popular music streaming app.",
             link: "https://princekumar249.github.io/Spotify_Clone/",
+            vedio: connectGameV
         },
         {
             id: 7,
@@ -124,44 +127,74 @@ function Project() {
 
     return (
         <>
-            <div name="Projects" className='max-w-screen-2xl container mx-auto px-4 md:px-10 my-5 md:my-10 dark:bg-gray-950 dark:text-white'>
-                <div>
-                    <h1 className='text-3xl font-bold mb-5'>My Projects</h1>
-                    <div className='w-full md:w-3/4 m-auto'>
-                        <Slider {...settings}>
-                            {
-                                cardLogo.map(({ id, logo, name, info, link, vedio }) => (
-                                    <div
-                                        key={id}
-                                        className='rounded-lg shadow-lg p-3 cursor-pointer hover:scale-105 duration-300 bg-gray-100 dark:bg-white mx-2'
-                                    >
-                                        <img src={logo} className="w-full h-40 object-contain mb-3" alt={name} />
-                                        <div>
-                                            <h2 className='font-bold text-lg md:text-xl dark:text-black px-2'>{name}</h2>
-                                            <p className='px-2 mt-2 text-gray-700 text-sm text-justify'>{info}</p>
-                                        </div>
-                                        <div className='px-2 py-3 space-x-2 flex flex-wrap'>
-                                            <button
-                                                onClick={() => window.open(link, "_blank")}
-                                                className='bg-sky-500 text-white hover:bg-white hover:text-sky-600 hover:scale-105 cursor-pointer duration-200 border-2 border-transparent hover:border-sky-700 font-semibold rounded-md px-3 py-1'
-                                            >
-                                                Website
-                                            </button>
+            <div name="Projects" className="max-w-screen-2xl mx-auto px-4 md:px-10 my-12 dark:text-white">
+
+                <h1 className="text-3xl font-bold mb-6 text-center">My Projects</h1>
+
+                {/* -------------------- DESKTOP VIEW (SLIDER) -------------------- */}
+                <div className="hidden md:block w-full md:w-4/5 mx-auto">
+                    <Slider {...settings}>
+                        {cardData.map(({ id, logo, name, info, link, vedio }) => (
+                            <div key={id} className="px-3">
+                                <div className="bg-gray-100 dark:bg-white p-5 rounded-xl shadow-md hover:scale-105 duration-300">
+                                    <img src={logo} alt={name} className="w-full h-40 object-contain mb-3" />
+                                    <h2 className="font-bold text-lg text-black">{name}</h2>
+                                    <p className="text-gray-600 text-sm mt-2 text-justify">{info}</p>
+
+                                    <div className="flex gap-2 mt-4 ">
+                                        <button
+                                            onClick={() => window.open(link, "_blank")}
+                                            className="bg-sky-500 text-white px-3 py-1 rounded-md hover:bg-white hover:text-sky-600 border hover:border-sky-500 duration-200 cursor-pointer"
+                                        >
+                                            Website
+                                        </button>
+
+                                        {vedio && (
                                             <button
                                                 onClick={() => window.open(vedio, "_blank")}
-                                                className='bg-red-600 text-white hover:bg-white hover:text-red-600 hover:scale-105 cursor-pointer duration-200 border-2 border-transparent hover:border-red-700 font-semibold rounded-md px-3 py-1'
+                                                className="bg-red-600 text-white px-3 py-1 rounded-md hover:bg-white hover:text-red-600 border hover:border-red-600 duration-200 cursor-pointer"
                                             >
-                                                Demo Vedio
+                                                Demo Video
                                             </button>
-                                        </div>
+                                        )}
                                     </div>
-                                ))
-                            }
-                        </Slider>
-                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
+
+                {/* -------------------- MOBILE VIEW (NO SLIDER) -------------------- */}
+                <div className="md:hidden flex flex-col gap-5">
+                    {cardData.map(({ id, logo, name, info, link, vedio }) => (
+                        <div key={id} className="bg-gray-100 dark:bg-white p-5 rounded-xl shadow-md">
+                            <img src={logo} alt={name} className="w-full h-36 object-contain mb-3" />
+                            <h2 className="font-bold text-lg text-black">{name}</h2>
+                            <p className="text-gray-600 text-sm mt-2">{info}</p>
+
+                            <div className="flex gap-2 mt-4">
+                                <button
+                                    onClick={() => window.open(link, "_blank")}
+                                    className="bg-sky-500 text-white px-3 py-1 rounded-md hover:bg-white hover:text-sky-600 border hover:border-sky-500 duration-200"
+                                >
+                                    Website
+                                </button>
+
+                                {vedio && (
+                                    <button
+                                        onClick={() => window.open(vedio, "_blank")}
+                                        className="bg-red-600 text-white px-3 py-1 rounded-md hover:bg-white hover:text-red-600 border hover:border-red-600 duration-200"
+                                    >
+                                        Demo Video
+                                    </button>
+                                )}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-            <hr className='opacity-5 mt-8' />
+
+            <hr className="opacity-5 mt-8" />
         </>
     );
 }

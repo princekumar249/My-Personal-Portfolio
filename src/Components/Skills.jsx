@@ -6,7 +6,8 @@ import ReactJS from "../assets/skillsImg/reactjs.png";
 import MongoDB from "../assets/skillsImg/mongodb.jpg";
 import Express from "../assets/skillsImg/express.png";
 import Node from "../assets/skillsImg/node.png";
-import Oracle from "../assets/skillsImg/oracle.png";
+import TailwindCSS from "../assets/skillsImg/TailwindCSS.png";
+import Bootstrap from "../assets/skillsImg/Bootstrap.png";
 
 import SkillRating from './SkillRating';
 
@@ -26,40 +27,47 @@ function Skills() {
         },
         {
             id: 3,
+            logo: Bootstrap,
+            name: "Bootstrap",
+            level: 5
+        },
+        {
+            id: 4,
             logo: JavaScript,
             name: "JavaScript",
             level: 4
         },
         {
-            id: 4,
+            id: 5,
             logo: ReactJS,
             name: "ReactJS",
             level: 4
         },
         {
-            id: 5,
+            id: 6,
+            logo: TailwindCSS,
+            name: "TailwindCSS",
+            level: 4
+        },
+        {
+            id: 7,
             logo: MongoDB,
             name: "MongoDB",
             level: 4
         },
         {
-            id: 6,
+            id: 8,
             logo: Express,
             name: "Express",
             level: 4
         },
         {
-            id: 7,
+            id: 9,
             logo: Node,
             name: "NodeJS",
             level: 4
-        },
-        {
-            id: 8,
-            logo: Oracle,
-            name: "Oracle",
-            level: 4
         }
+        
     ]
     const [isHovered, setIsHovered] = useState(null);
     return (
