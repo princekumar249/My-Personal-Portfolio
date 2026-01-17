@@ -73,7 +73,7 @@ function Skills() {
     return (
         <>
             <div name="Skills" className='max-w-screen-2xl container mx-auto px-4 md:px-15 my-10 dark:bg-gray-950 dark:text-white'>
-                <h1 className='font-bold text-3xl mb-5'>Skills</h1>
+                <h1 className='font-bold text-3xl mb-14 text-center'>My Skills</h1>
                 <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>
                     {
                         cardInfo.map(({ id, logo, name, level }) => (
