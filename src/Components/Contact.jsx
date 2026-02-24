@@ -48,7 +48,15 @@ function Contact() {
                                 onSubmit={handleSubmit(onSubmit)}
                                 // action="https://getform.io/f/broggjqa"
                                 // method="POST"
-                                className='bg-slate-200 w-85 md:w-96 rounded-xl p-4'>
+                                className='bg-slate-200 w-85 md:w-96 rounded-xl p-4 hover:scale-105 duration-700'
+                                style={{
+                                    border: "1px solid #C0CDDF",
+                                    boxShadow: "0 4px 12px rgb(128, 128, 128, 0.8)",
+                                    overflow: "hidden",
+                                    transform: 'all 0.6 ease',
+
+                                }}
+                            >
                                 <h1 className='font-semibold text-xl mb-2 '>Send Your Message</h1>
                                 <div className='flex flex-col mb-4'>
                                     <label>Full Name:</label>

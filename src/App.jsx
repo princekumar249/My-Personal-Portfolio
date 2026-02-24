@@ -7,16 +7,28 @@ import Project from "./Components/Project"
 import Skills from "./Components/Skills"
 import Contact from "./Components/Contact"
 import Footer from "./Components/Footer"
+import ScrollReveal from './ScrollReveal';
 function App() {
   return (
     <>
       <div className='dark:bg-gray-950 dark:text-white'>
         <Navbar />
-        <Home />
-        <About />
-        <Project />
-        <Skills />
-        <Contact />
+        <ScrollReveal>
+          <Home />
+        </ScrollReveal>
+        <ScrollReveal>
+          <About />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Project />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Skills />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Contact />
+        </ScrollReveal>
+
         <Footer />
       </div>
       <Toaster />

@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Images
+// Project Images
 import Weather from '../assets/projectImg/Weather.png';
 import SimonGame from '../assets/projectImg/simonGame.png';
 import ConnectGame from '../assets/projectImg/connectGame.png';
@@ -11,6 +11,7 @@ import ToDOList from '../assets/projectImg/ToDoList.png';
 import Calculator from '../assets/projectImg/calculator.png';
 import StayRnb from '../assets/projectImg/stayrnb.png';
 import StockEra from '../assets/projectImg/StockEra.png';
+import Meetlance from '../assets/projectImg/Meetlance.png';
 
 // Videos
 import Cal from '../assets/vedio/CalculatorVedio.mp4';
@@ -69,6 +70,14 @@ function Project() {
     const cardData = [
         {
             id: 1,
+            logo: Meetlance,
+            name: "Meetlance",
+            info: "A MERN-based platform offering live meetings, secure language-specific interviews, and real-time coding practice with instant success and error feedback.",
+            link: "https://meetlance.onrender.com/",
+            vedio: connectGameV
+        },
+        {
+            id: 2,
             logo: StayRnb,
             name: "StayRnb",
             info: "StayRnB (Stay Rest and Breakfast), A full-stack booking website with authentication, add listings, bookings, reviews, and interactive maps built.",
@@ -76,7 +85,7 @@ function Project() {
             vedio: connectGameV
         },
         {
-            id: 2,
+            id: 3,
             logo: StockEra,
             name: "StockEra",
             info: "Built a MERN-stack trading platform with authentication, dashboards, real-time stock data, holdings, secure APIs, and optimized performance.",
@@ -84,7 +93,7 @@ function Project() {
             vedio: Cal
         },
         {
-            id: 3,
+            id: 4,
             logo: Weather,
             name: "Weather Forecast App",
             info: "A responsive weather app built with React that shows real-time temperature, humidity, and wind data using the Open WeatherMap API.",
@@ -92,7 +101,7 @@ function Project() {
             vedio: connectGameV
         },
         {
-            id: 4,
+            id: 5,
             logo: SimonGame,
             name: "Simon Game",
             info: "A classic Simon Game built using HTML, CSS, and JavaScript that tests memory by repeating increasingly complex color sequences.",
@@ -100,7 +109,7 @@ function Project() {
             vedio: connectGameV
         },
         {
-            id: 5,
+            id: 6,
             logo: ConnectGame,
             name: "Connect-4-Game",
             info: "A two-player Connect four game built with HTML, CSS, and JavaScript. where both player drop colored discs to connect four.",
@@ -108,7 +117,7 @@ function Project() {
             vedio: connectGameV
         },
         {
-            id: 6,
+            id: 7,
             logo: ToDOList,
             name: "To-Do-List",
             info: "A simple and user-friendly To-Do List app using HTML, CSS, and JavaScript that lets users add, edit, delete, and manage daily tasks easily.",
@@ -116,7 +125,7 @@ function Project() {
             vedio: toDoListVedio
         },
         {
-            id: 7,
+            id: 8,
             logo: Calculator,
             name: "Calculator",
             info: "A basic calculator built with HTML, CSS, and JavaScript that performs addition, subtraction, multiplication, and division operations easily.",

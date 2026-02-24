@@ -67,7 +67,7 @@ function Skills() {
             name: "NodeJS",
             level: 4
         }
-        
+
     ]
     const [isHovered, setIsHovered] = useState(null);
     return (
@@ -81,7 +81,7 @@ function Skills() {
                                 key={id}
                                 onMouseEnter={() => setIsHovered(id)}
                                 onMouseLeave={() => setIsHovered(null)}
-                                className='flex flex-col justify-center bg-gray-100 items-center shadow-md rounded-full h-[160px] w-[160px] hover:scale-110 duration-300 cursor-pointer'>
+                                className='flex flex-col justify-center bg-gray-100 items-center shadow-md rounded-full h-[160px] w-[160px] hover:scale-110 duration-700 cursor-pointer'>
                                 <img src={logo} className='md:w-[100px] md:h-[100px] w-[100px] h-[100px] rounded-full' alt="" />
                                 <div>
                                     <h1 className='md:font-bold dark:text-black'>{name}</h1>

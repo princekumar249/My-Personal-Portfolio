@@ -17,7 +17,7 @@ import { ReactTyped } from "react-typed";
 function Home() {
     return (
         <>
-            <div name="Home" className='max-w-screen-2xl container mx-0 mt-16 px-4 md:px-15 my-20 dark:bg-gray-950 dark:text-white' >
+            <div name="Home" className='max-w-screen-2xl container mx-0 mt-16 px-4 md:px-15 my-20 dark:bg-gray-950 dark:text-white ' >
                 <div className='flex flex-col md:flex-row justify-between'>
                     <div className='md:w-1/2 mt-6 md:mt-26 space-y-2 order-2 md:order-1'>
                         <h3 className='font-semibold text-xl md:text-2xl'>Hello, My Name is</h3>
@@ -61,7 +61,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <hr className='opacity-5 md:mt-[-30px] mt-[-40px]' />
+            <hr className='opacity-5 md:mt-[-30px] mt-[-40px] dark:opacity-10' />
         </>
 
     )
