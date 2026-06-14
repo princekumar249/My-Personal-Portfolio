@@ -58,7 +58,11 @@ function Skills() {
         {
             id: 8,
             logo: Express,
+<<<<<<< HEAD
             name: "Express.js",
+=======
+            name: "Express",
+>>>>>>> 4de6d033c734184e385634944e48780a5897bb6c
             level: 4
         },
         {
