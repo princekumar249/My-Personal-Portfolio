@@ -155,7 +155,7 @@ function Project() {
                                             onClick={() => window.open(link, "_blank")}
                                             className="bg-sky-500 text-white px-3 py-1 rounded-md hover:bg-white hover:text-sky-600 border hover:border-sky-500 duration-200 cursor-pointer"
                                         >
-                                            Website
+                                            Live Demo
                                         </button>
 
                                         {/* {vedio && (

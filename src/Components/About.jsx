@@ -1,6 +1,5 @@
 import React from 'react'
 import icon2 from "../assets/photo/icon2.jpg"
-import pdf from "../assets/photo/Prince_Kumar_Resume.pdf";
 function About() {
     return (
         <>
@@ -16,9 +15,9 @@ function About() {
                         <img src={icon2} className='md:h-80 md:w-80 rounded-4xl border-2 border-red-500 md:ml-17' alt="" />
                     </div>
                     <div className='md:w-1/2 mt-5 md:mt-10'>
-                        <p className='mb-8 text-justify'>I am <b>Prince Kumar</b>, a dedicated <b>Full Stack Developer</b> specializing in the <b>MERN stack</b>. Currently pursuing a <b>B.Tech</b> in <b>Information Technology</b>, I actively work on real-world projects to strengthen my technical skills and improve my understanding of modern web technologies. I'm passionate about building scalable, user-focused applications and improving my problem-solving abilities. I'm always eager to learn, innovate, and grow as a Software Developer.</p>
+                        <p className='mb-8 text-justify'>I am <b>Prince Kumar</b>, a <b>Full Stack Developer</b> experienced in designing and developing scalable web applications using <b>React.js, Node.js, Express.js, MongoDB, and AWS</b>. With hands-on experience in building production-grade applications, I focus on creating secure, efficient, and user-centric solutions through modern development practices, robust backend architectures, and cloud deployment. I am passionate about solving real-world problems and continuously enhancing my skills to deliver impactful software products.</p>
                         <a
-                            href={pdf}
+                            href="https://drive.google.com/file/d/1AQ_qMXSgKdi3WSN9YZgTOnN_hM_I0pch/view?usp=sharing"
                             target='_blank'
                             className='inline-block font-semibold px-8 py-3 mt-[-20px] text-white border-2 border-transparent bg-red-600 rounded-md hover:bg-white hover:text-red-600 hover:border-red-600 hover:scale-105 duration-400 transition-al cursor-pointer '
                         >
