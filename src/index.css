@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Fredoka:wght@300..700&family=Poppins:wght@500&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0%;
+  padding: 0%;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.slick-slide>div {
+  margin: 0 20px;
+}
