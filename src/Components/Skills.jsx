@@ -16,13 +16,13 @@ function Skills() {
         {
             id: 1,
             logo: HTML,
-            name: "HTML",
+            name: "HTML5",
             level: 5
         },
         {
             id: 2,
             logo: CSS,
-            name: "CSS",
+            name: "CSS3",
             level: 4
         },
         {

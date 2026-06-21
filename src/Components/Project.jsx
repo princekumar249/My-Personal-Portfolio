@@ -105,7 +105,7 @@ function Project() {
             logo: SimonGame,
             name: "Simon Game",
             info: "A classic Simon Game built using HTML, CSS, and JavaScript that tests memory by repeating increasingly complex color sequences.",
-            link: "https://pricekumar2410.github.io/Simon-Game/",
+            link: "https://princekumar1024.github.io/Simon-Game/",
             vedio: connectGameV
         },
         {
@@ -113,7 +113,7 @@ function Project() {
             logo: ConnectGame,
             name: "Connect-4-Game",
             info: "A two-player Connect four game built with HTML, CSS, and JavaScript. where both player drop colored discs to connect four.",
-            link: "https://pricekumar2410.github.io/connect-4-game/",
+            link: "https://princekumar1024.github.io/connect-4-game/",
             vedio: connectGameV
         },
         {
@@ -121,7 +121,7 @@ function Project() {
             logo: ToDOList,
             name: "To-Do-List",
             info: "A simple and user-friendly To-Do List app using HTML, CSS, and JavaScript that lets users add, edit, delete, and manage daily tasks easily.",
-            link: "https://pricekumar2410.github.io/To-Do-List/",
+            link: "https://princekumar1024.github.io/To-Do-List/",
             vedio: toDoListVedio
         },
         {
@@ -129,7 +129,7 @@ function Project() {
             logo: Calculator,
             name: "Calculator",
             info: "A basic calculator built with HTML, CSS, and JavaScript that performs addition, subtraction, multiplication, and division operations easily.",
-            link: "https://pricekumar2410.github.io/Calculator/",
+            link: "https://princekumar1024.github.io/Calculator/",
             vedio: Cal
         }
     ];

@@ -39,7 +39,7 @@ function Home() {
                                 <h1 className='font-bold ml-16'>Contact on</h1>
                                 <ul className='flex space-x-4'>
                                     <a href="https://www.linkedin.com/in/prince-kumar-p2005" target='_blank' rel="noopener noreferrer" className='hover:scale-110 duration-200 cursor-pointer text-blue-500'><li><FaLinkedin size={30} /></li></a>
-                                    <a href="https://github.com/pricekumar2410" target='_blank' rel="noopener noreferrer" className='hover:scale-110 duration-200 cursor-pointer'><li><FaGithub size={30} /></li></a>
+                                    <a href="https://github.com/princekumar1024" target='_blank' rel="noopener noreferrer" className='hover:scale-110 duration-200 cursor-pointer'><li><FaGithub size={30} /></li></a>
                                     <a href="https://wa.me/918439017572" target='_blank' rel="noopener noreferrer" className='hover:scale-110 duration-200 cursor-pointer text-green-500'><li><FaSquareWhatsapp size={30} /></li></a>
                                     <a href="mailto: princekumar746586@gmail.com" target='_blank' rel="noopener noreferrer" className='hover:scale-110 duration-200 cursor-pointer text-red-600'><li><IoMdMail size={30} /></li></a>
                                     <a href="tel:918439017572" target='_blank' rel="noopener noreferrer" className='hover:scale-110 duration-200 cursor-pointer text-emerald-400'><li><MdAddIcCall size={30} /></li></a>
