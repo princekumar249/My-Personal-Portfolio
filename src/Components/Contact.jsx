@@ -102,7 +102,7 @@ function Contact() {
                     <div className='md:w-1/2'>
                         <ul className='flex md:space-x-8 md:mx-30 space-x-4 mt-6'>
                             <a href="https://www.linkedin.com/in/prince-kumar-p2005" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-blue-500'><li><FaLinkedin size={40} /></li></a>
-                            <a href="https://github.com/pricekumar2410" target='_blank' className='hover:scale-110 duration-200 cursor-pointer'><li><FaGithub size={40} /></li></a>
+                            <a href="https://github.com/princekumar1024" target='_blank' className='hover:scale-110 duration-200 cursor-pointer'><li><FaGithub size={40} /></li></a>
                             <a href="https://wa.me/918439017572" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-green-500'><li><FaSquareWhatsapp size={40} /></li></a>
                             <a href="mailto: princekumar746586@gmail.com" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-red-600'><li><IoMdMail size={40} /></li></a>
                             <a href="tel:918439017572" target='_blank' className='hover:scale-110 duration-200 cursor-pointer text-emerald-400'><li><MdAddIcCall size={40} /></li></a>
